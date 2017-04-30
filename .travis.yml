@@ -17,5 +17,5 @@ install:
 script: 
   - qmake
   - make
-  - valgrind --leak-check=full -v --show-reachable=yes --log-file=memcheck.log ./travis_qmake_gcc_cpp11_memcheck
+  - valgrind --leak-check=full -v --show-reachable=yes --log-file=memcheck.log ./travis_qmake_gcc_cpp14_memcheck
   - cat memcheck.log
