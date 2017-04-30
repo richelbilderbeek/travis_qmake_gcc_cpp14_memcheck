@@ -1,0 +1,21 @@
+language: cpp
+compiler: gcc
+dist: trusty
+
+before_install:
+  # C++14
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+install: 
+  # C++14
+  - sudo apt-get install -qq g++-5
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+  # valgrind, for memcheck
+  - sudo apt-get install -qq valgrind
+
+script: 
+  - qmake
+  - make
+  - valgrind --leak-check=full -v --show-reachable=yes --log-file=memcheck.log ./travis_qmake_gcc_cpp11_memcheck
+  - cat memcheck.log
