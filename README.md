@@ -25,4 +25,4 @@ Less complex builds:
 
  * C++98: [travis_qmake_gcc_cpp98_memcheck](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp98_memcheck)
  * C++11: [travis_qmake_gcc_cpp11_memcheck](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp11_memcheck)
- * No memcheck: [travis_qmake_gcc_cpp11](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp11)
+ * No `memcheck`: [travis_qmake_gcc_cpp11](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp11)
